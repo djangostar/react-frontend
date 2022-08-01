@@ -52,6 +52,22 @@ function App() {
         })
       }
 
+      const handleChange = (game) => {
+        fetch(`http://localhost:9292/games/${game.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({...game, currently_playing:false ? true : false})
+        })
+        .then(res => res.json())
+        .then(data => {
+          setGames(games.map(g => game.id === data.id ? data : g))
+        })
+      }
+
+  
+
   return (
     <div className="App">
       <NavBar />
@@ -59,7 +75,7 @@ function App() {
         <Route path='/' element ={ <Home />} />
         <Route path='/platforms/new' element={<CreatePlatformForm onAddPlatform={onAddPlatform} />} />
         <Route path='/games/new' element={<CreateGameForm onAddGame={onAddGame} platforms={platforms} />} />
-        <Route path='/display' element={games.map(g => <Display game={g} key={`${g.id}${g.title}`} />)}/>
+        <Route path='/display' element={games.map(g => <Display game={g} handleChange={handleChange} key={`${g.id}${g.title}`} />)}/>
       </Routes>
     </div>
   );
