@@ -35,7 +35,7 @@ const  CreateGameForm = ({ onAddGame, platforms }) => {
                 </label>
                 <label>
                 Year Released:
-                <input name="year-released" type="number" value={formInfo.year_released} onChange={handleChange} />
+                <input name="year-released" type="text" value={formInfo.year_released} onChange={handleChange} />
                 </label>
                 <label>
                 Platform:
