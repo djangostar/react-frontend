@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './NavBar'
+import Home from './Home';
 import CreatePlatformForm from './CreatePlatformForm';
 import CreateGameForm from './CreateGameForm';
+import Display from './Display';
 import '../App.css';
 
 function App() {
@@ -44,14 +48,19 @@ function App() {
       })
         .then(res => res.json())
         .then(newGame => {
-          setPlatforms([newGame, ...game])
+          setGames([newGame, ...game])
         })
       }
 
   return (
     <div className="App">
-      <CreatePlatformForm onAddPlatform={onAddPlatform} />
-      <CreateGameForm onAddGame={onAddGame} />
+      <NavBar />
+      <Routes>
+        <Route path='/' element ={ <Home />} />
+        <Route path='/platforms/new' element={<CreatePlatformForm onAddPlatform={onAddPlatform} />} />
+        <Route path='/games/new' element={<CreateGameForm onAddGame={onAddGame} platforms={platforms} />} />
+        <Route path='/display' element={games.map(g => <Display game={g} key={`${g.id}${g.title}`} />)}/>
+      </Routes>
     </div>
   );
 }
