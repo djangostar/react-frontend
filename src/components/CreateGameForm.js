@@ -17,7 +17,7 @@ const  CreateGameForm = ({ onAddGame, platforms }) => {
         e.preventDefault()
         onAddGame(formInfo)
     }
-    console.log(platforms)
+    
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -30,12 +30,12 @@ const  CreateGameForm = ({ onAddGame, platforms }) => {
                 <input name="genre" type="text" placeholder="Genre" value={formInfo.genre} onChange={handleChange} />
                 </label>
                 <label>
-                Review:
+                Review: 
                 <textarea name="review" placeholder="Review" value={formInfo.review} onChange={handleChange} />
                 </label>
                 <label>
                 Year Released:
-                <input name="year-released" type="text" value={formInfo.year_released} onChange={handleChange} />
+                <input name="year_released" type="text" value={formInfo.year_released} onChange={handleChange} />
                 </label>
                 <label>
                 Platform:
