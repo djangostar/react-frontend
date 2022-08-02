@@ -8,13 +8,14 @@ const NavBar = () => {
         to="/"
         style={({ isActive }) => ({
           fontSize: "30px",
+          fontFamily: "Press Start 2P",
           display: "inline-block",
-          width: "100px",
+          width: "120px",
           padding: "12px",
-          margin: "0 6px 6px",
+          margin: "5px",
           background: "none",
           textDecoration: "blink",
-          color: isActive ? "darkred" : "darkblue",
+          color: isActive ? "yellow" : "purple",
         })}
         className={({ isActive }) => `nav_link${isActive ? " active" : ""}`}
         end
@@ -26,12 +27,12 @@ const NavBar = () => {
         style={({ isActive }) => ({
           fontSize: "30px",
           display: "inline-block",
-          width: "100px",
+          width: "150px",
           padding: "12px",
           margin: "0 6px 6px",
           background: "none",
           textDecoration: "blink",
-          color: isActive ? "darkred" : "darkblue",
+          color: isActive ? "yellow" : "purple",
         })}
         className={({ isActive }) => `nav_link${isActive ? " active" : ""}`}
         end

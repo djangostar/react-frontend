@@ -5,8 +5,8 @@ import Home from "./Home";
 import CreatePlatformForm from "./CreatePlatformForm";
 import CreateGameForm from "./CreateGameForm";
 import Display from "./Display";
-import "../App.css";
-import background from "./bakground-img.jpeg";
+import "../stylesheets/App.css";
+import background from "./background-img.webp";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -86,7 +86,12 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})` }}>
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
+    >
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
