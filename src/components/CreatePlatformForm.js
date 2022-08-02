@@ -15,7 +15,7 @@ const CreatePlatformForm = ({ onAddPlatform }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddPlatform(formInfo);
-    navigate("/display");
+    navigate("/games/new");
   };
 
   return (
