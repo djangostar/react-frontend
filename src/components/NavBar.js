@@ -49,7 +49,7 @@ const NavBar = () => {
           margin: "0 6px 6px",
           background: "none",
           textDecoration: "blink",
-          color: isActive ? "darkred" : "darkblue",
+          color: isActive ? "yellow" : "purple",
         })}
         className={({ isActive }) => `nav_link${isActive ? " active" : ""}`}
         end
@@ -66,7 +66,7 @@ const NavBar = () => {
           margin: "0 6px 6px",
           background: "none",
           textDecoration: "blink",
-          color: isActive ? "darkred" : "darkblue",
+          color: isActive ? "yellow" : "purple",
         })}
         className={({ isActive }) => `nav_link${isActive ? " active" : ""}`}
         end
