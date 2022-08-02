@@ -77,7 +77,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             ))}
           </select>
         </label>
-        <input type="submit" value="Create a Game" />
+        <input type="submit" value="Add Game" />
       </form>
     </div>
   );
