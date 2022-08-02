@@ -6,6 +6,7 @@ import CreatePlatformForm from "./CreatePlatformForm";
 import CreateGameForm from "./CreateGameForm";
 import Display from "./Display";
 import "../App.css";
+import background from "./bakground-img.jpeg";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -85,7 +86,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${background})` }}>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

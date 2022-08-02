@@ -22,7 +22,7 @@ const CreatePlatformForm = ({ onAddPlatform }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <label>
-          Platform Name :
+          <h2>Platform Name :</h2>
           <input
             type="text"
             name="platform_name"

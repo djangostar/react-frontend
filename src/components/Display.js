@@ -29,6 +29,7 @@ const Display = ({ game, handleChange, handleDelete }) => {
         </button>
       )}
       <button onClick={() => handleDelete(game.id)}>Delete Game</button>
+      <hr />
     </div>
   );
 };
