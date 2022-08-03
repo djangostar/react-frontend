@@ -90,6 +90,7 @@ function App() {
       className="App"
       style={{
         backgroundImage: `url(${background})`,
+        // position: "100%",
       }}
     >
       <NavBar />

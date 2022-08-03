@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const DisplayGames = ({ game, handleChange, handleDelete }) => {
+const DisplayGames = ({ game, handleChange, handleDeleteGame }) => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   return (
@@ -28,7 +28,7 @@ const DisplayGames = ({ game, handleChange, handleDelete }) => {
           Currently Playing
         </button>
       )}
-      <button onClick={() => handleDelete(game.id)}>Delete Game</button>
+      <button onClick={() => handleDeleteGame(game.id)}>Delete Game</button>
       <hr />
     </div>
   );

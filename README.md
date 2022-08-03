@@ -2,11 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+This project is mainly focuse on the back end using a combo of Avtive Record, Ruby and Sinatra to build an API where request/response works flawlessly with React components.
 
-### `npm start`
+One-to-many relationship between Gaming Platforms and Games.
+Platforms have many games and games belong to platforms.
+
+Platforms has GET/POST functionality.
+Games is full CRUD.
+
+React code is minimal and simple, my focus was to build an API and have it interact with React.
+
+###
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
