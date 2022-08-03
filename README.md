@@ -20,13 +20,11 @@ This is the default page where the journey begins with basic instructions on how
 
 ![](gamesGIF1.gif)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.game
+### Add Platform
 
-### `npm test`
+Since the Platform table is the parent(has many games). We add the platform if not already listed, once added it will redirect you to the Add Game component in which the dropdown menu will be automatically updated with your newly added platform thanks to the Primary key in the Platform table and the Foreign key in the Games table which is what holds the relationship together.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](gamesGIF2.gif)
 
 ### `npm run build`
 
