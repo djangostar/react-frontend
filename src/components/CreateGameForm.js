@@ -31,7 +31,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             type="text"
             placeholder="Title"
             value={formInfo.title}
-            key={formInfo.title}
+            // key={formInfo.title}
             onChange={handleChange}
           />
         </label>
@@ -42,7 +42,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             type="text"
             placeholder="Genre"
             value={formInfo.genre}
-            key={formInfo.genre}
+            // key={formInfo.genre}
             onChange={handleChange}
           />
         </label>
@@ -52,7 +52,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             name="review"
             placeholder="Review"
             value={formInfo.review}
-            key={formInfo.review}
+            // key={formInfo.review}
             onChange={handleChange}
           />
         </label>
@@ -62,7 +62,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             name="year_released"
             type="text"
             value={formInfo.year_released}
-            key={formInfo.year_released}
+            // key={formInfo.year_released}
             onChange={handleChange}
           />
         </label>
@@ -71,9 +71,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
           <select name="platform_id" onChange={handleChange}>
             <option>Select a Platform</option>
             {platforms.map((platform) => (
-              <option value={platform.id} key={platform.id}>
-                {platform.platform_name}
-              </option>
+              <option value={platform.id}>{platform.platform_name}</option>
             ))}
           </select>
         </label>
