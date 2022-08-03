@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Display = ({ game, handleChange, handleDelete }) => {
+const DisplayGames = ({ game, handleChange, handleDelete }) => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   return (
@@ -34,4 +34,4 @@ const Display = ({ game, handleChange, handleDelete }) => {
   );
 };
 
-export default Display;
+export default DisplayGames;

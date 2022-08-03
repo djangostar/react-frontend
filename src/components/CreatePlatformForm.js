@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DisplayPlatforms from "./DisplayPlatforms";
 
-const CreatePlatformForm = ({ onAddPlatform }) => {
+const CreatePlatformForm = ({ platforms, onAddPlatform }) => {
   const [formInfo, setFormData] = useState({
     platform_name: "",
   });
@@ -32,6 +33,10 @@ const CreatePlatformForm = ({ onAddPlatform }) => {
         </label>
         <input type="submit" value="Add Platform" />
       </form>
+      <hr />
+      {platforms.map((p) => (
+        <DisplayPlatforms platform={p} key={`${p.id}`} />
+      ))}
     </div>
   );
 };

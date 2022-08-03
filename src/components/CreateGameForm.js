@@ -31,7 +31,7 @@ const CreateGameForm = ({ onAddGame, platforms }) => {
             type="text"
             placeholder="Title"
             value={formInfo.title}
-            // key={formInfo.title}
+            // key={`${formInfo.title}`}
             onChange={handleChange}
           />
         </label>

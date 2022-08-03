@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import CreatePlatformForm from "./CreatePlatformForm";
 import CreateGameForm from "./CreateGameForm";
-import Display from "./Display";
+import DisplayGames from "./DisplayGames";
 import "../stylesheets/App.css";
 import background from "./background-img.webp";
 
@@ -75,7 +75,7 @@ function App() {
       });
   };
 
-  const handleDelete = (id) => {
+  const handleDeleteGame = (id) => {
     fetch(`http://localhost:9292/games/${id}`, {
       method: "DELETE",
     })
@@ -97,7 +97,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/platforms/new"
-          element={<CreatePlatformForm onAddPlatform={onAddPlatform} />}
+          element={
+            <CreatePlatformForm
+              platforms={platforms}
+              onAddPlatform={onAddPlatform}
+            />
+          }
         />
         <Route
           path="/games/new"
@@ -108,10 +113,10 @@ function App() {
         <Route
           path="/display"
           element={games.map((g) => (
-            <Display
+            <DisplayGames
               game={g}
               handleChange={handleChange}
-              handleDelete={handleDelete}
+              handleDelete={handleDeleteGame}
               key={`${g.id}${g.title}`}
             />
           ))}
