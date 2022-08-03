@@ -12,15 +12,16 @@ Platforms have many games and games belong to platforms.
 Platforms has GET/POST functionality.
 Games is full CRUD.
 
-React code is minimal and simple, my focus was to build an API and have it interact with React.
+React code is minimal and simple, my focus was to build an API and have it interact with React, such as request/response flow for CRUD methods and table relations.
 
-###
+### Home Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the default page where the journey begins with basic instructions on how the app works.
+
+![](https://github.com/react-frontend/gameGIF.gif)
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You may also see any lint errors in the console.game
 
 ### `npm test`
 
