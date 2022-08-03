@@ -18,7 +18,7 @@ React code is minimal and simple, my focus was to build an API and have it inter
 
 This is the default page where the journey begins with basic instructions on how the app works.
 
-![](https://github.com/react-frontend/gameGIF.gif)
+![](https://github.com/react-frontend/gameGIF1.gif)
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.game
