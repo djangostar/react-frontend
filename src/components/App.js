@@ -116,7 +116,7 @@ function App() {
             <DisplayGames
               game={g}
               handleChange={handleChange}
-              handleDelete={handleDeleteGame}
+              handleDeleteGame={handleDeleteGame}
               key={`${g.id}${g.title}`}
             />
           ))}
