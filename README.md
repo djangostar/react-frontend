@@ -24,56 +24,38 @@ This is the default page where the journey begins with basic instructions on how
 
 Since the Platform table is the parent(has many games). We add the platform if not already listed, once added it will redirect you to the Add Game component in which the dropdown menu will be automatically updated with your newly added platform thanks to the Primary key in the Platform table and the Foreign key in the Games table which is what holds the relationship together.
 
+This is where I implement GET/POST in the action platforms_controller.
+
 ![](gamesGIF2.gif)
 
-### `npm run build`
+### Add Game
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here we have another form with several inputs to fill out in order to add the game. Inputs include Title, Genre, Review, Year Released and finally the dropdown option where added Platforms will be displayed in order to relate any given platoform to the newly added game.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once the "Add Game" button is clicked it will add the game with it's related platform and redirect you to the Display Games component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This is where I implement POST request in which the games_controller is responsible for producing the correct output displayed in Display Games component.
 
-### `npm run eject`
+![](gamesGIF3.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Display Games
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is where you will see your games displayed and will have the option to switch between currently playing to not problem which is a boolean value that will change in the backend from true to false and vice versa.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You will also Have the option to delete the game from your collection if so desired.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is where I implement GET/PATCH/DELETE in the games_controller while fetching it from the front end so changes are consistent in both cases.
 
-## Learn More
+CHANGE PLAYING STATUS:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](gamesGIF4.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+DELETE GAME FROM DATABASE:
 
-### Code Splitting
+![](gamesGIF5.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## THANK YOU FOR STOPPING BY!
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+That's it! pretty simple on a surface level but I learned so much about models, table relationships and request/response flow.
 
 # react-frontend
